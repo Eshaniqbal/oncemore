@@ -48,7 +48,7 @@ export function Cart() {
                       {item.name}
                     </Link>
                     <p className="text-sm text-muted-foreground">Size: {item.size}</p>
-                    <p className="text-sm font-medium">${item.price.toFixed(2)}</p>
+                    <p className="text-sm font-medium">₹{item.price.toLocaleString()}</p>
                     <div className="mt-2 flex items-center">
                       <Button
                         variant="outline"
@@ -84,7 +84,7 @@ export function Cart() {
           <SheetFooter className="flex-col gap-4 border-t bg-background px-6 pt-4 pb-6">
             <div className="flex justify-between text-lg font-semibold">
               <span>Subtotal</span>
-              <span>${cartTotal.toFixed(2)}</span>
+              <span>₹{cartTotal.toLocaleString()}</span>
             </div>
             <p className="text-sm text-muted-foreground">
               Shipping and taxes calculated at checkout.

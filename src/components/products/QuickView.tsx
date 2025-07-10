@@ -63,7 +63,14 @@ export default function QuickView({ product, isOpen, onOpenChange }: QuickViewPr
           <div className="flex flex-col">
             <DialogHeader>
               <DialogTitle className="font-headline text-3xl">{product.name}</DialogTitle>
-              <p className="text-2xl text-primary font-medium">${product.price.toFixed(2)}</p>
+              <div className="mt-2 flex items-baseline gap-2">
+                <p className="text-2xl text-primary font-medium">₹{product.price.toLocaleString()}</p>
+                {product.originalPrice && (
+                  <p className="text-xl text-muted-foreground line-through">
+                    ₹{product.originalPrice.toLocaleString()}
+                  </p>
+                )}
+              </div>
               <DialogDescription className="pt-4">{product.description}</DialogDescription>
             </DialogHeader>
 

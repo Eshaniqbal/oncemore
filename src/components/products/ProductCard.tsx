@@ -45,7 +45,14 @@ export default function ProductCard({ product }: ProductCardProps) {
           <Link href={`/products/${product.slug}`}>
             <h3 className="font-headline text-lg font-medium leading-tight text-foreground truncate">{product.name}</h3>
           </Link>
-          <p className="mt-1 text-md text-muted-foreground">${product.price.toFixed(2)}</p>
+          <div className="mt-1 flex items-baseline gap-2">
+            <p className="text-md text-primary font-semibold">₹{product.price.toLocaleString()}</p>
+            {product.originalPrice && (
+              <p className="text-sm text-muted-foreground line-through">
+                ₹{product.originalPrice.toLocaleString()}
+              </p>
+            )}
+          </div>
         </CardContent>
       </Card>
       <QuickView product={product} isOpen={isQuickViewOpen} onOpenChange={setIsQuickViewOpen} />

@@ -71,7 +71,14 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         </div>
         <div className="flex flex-col">
           <h1 className="font-headline text-3xl font-bold md:text-4xl">{product.name}</h1>
-          <p className="mt-2 text-2xl text-primary font-medium">${product.price.toFixed(2)}</p>
+          <div className="mt-2 flex items-baseline gap-2">
+            <p className="text-2xl text-primary font-medium">₹{product.price.toLocaleString()}</p>
+            {product.originalPrice && (
+              <p className="text-xl text-muted-foreground line-through">
+                ₹{product.originalPrice.toLocaleString()}
+              </p>
+            )}
+          </div>
           
           <Separator className="my-6" />
 
