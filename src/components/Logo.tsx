@@ -1,24 +1,15 @@
 import Link from 'next/link';
+import { Recycle } from 'lucide-react';
 
 export function Logo() {
   return (
-    <Link href="/" className="flex items-center space-x-2">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 100 20"
-        className="h-6 w-auto fill-current text-primary"
-        aria-label="OnceMore Logo"
-      >
-        <text
-          x="0"
-          y="15"
-          fontFamily="Playfair Display, serif"
-          fontSize="20"
-          fontWeight="bold"
-        >
-          OnceMore
-        </text>
-      </svg>
+    <Link href="/" className="flex items-center gap-2 group" aria-label="OnceMore Home">
+      <div className="p-1.5 bg-primary rounded-md group-hover:bg-primary/90 transition-colors">
+         <Recycle className="h-5 w-5 text-primary-foreground" />
+      </div>
+      <span className="font-headline text-2xl font-bold text-foreground tracking-tight">
+        OnceMore
+      </span>
     </Link>
   );
 }
