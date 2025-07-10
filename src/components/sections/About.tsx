@@ -53,7 +53,7 @@ export default function About() {
           </div>
           <div className="order-1 md:order-2 animate-in fade-in-0 slide-in-from-right-12 duration-500">
             <Image
-              src="https://placehold.co/600x750"
+              src="https://placehold.co/600x750.png"
               alt="Artisanal textile work"
               data-ai-hint="kashmiri textile"
               width={600}

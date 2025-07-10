@@ -46,9 +46,9 @@ export default function Hero() {
           </div>
           <div className="w-full h-full animate-in fade-in slide-in-from-right-12 duration-500">
             <Image
-              src="https://placehold.co/600x700"
+              src="https://placehold.co/600x700.png"
               alt="A stylish person wearing sustainable fashion"
-              data-ai-hint="fashion model"
+              data-ai-hint="woman model"
               width={600}
               height={700}
               className="rounded-lg object-cover shadow-xl aspect-[6/7] w-full"

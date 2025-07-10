@@ -13,25 +13,25 @@ const testimonials = [
     quote: "I absolutely adore the jacket I bought from OnceMore. The quality is incredible, and I love knowing it has a history. It's my new favorite piece!",
     name: "Jessica L.",
     handle: "Vintage Lover",
-    avatar: "https://placehold.co/40x40"
+    avatar: "https://placehold.co/40x40.png"
   },
   {
     quote: "Finally, a brand that aligns with my values. Beautiful, sustainable clothing that doesn't compromise on style. Shipping was fast and the packaging was eco-friendly.",
     name: "Michael B.",
     handle: "Conscious Consumer",
-    avatar: "https://placehold.co/40x40"
+    avatar: "https://placehold.co/40x40.png"
   },
   {
     quote: "The Pashmina shawl is a work of art. It's so soft and the craftsmanship is evident. I get compliments every time I wear it. Thank you, OnceMore!",
     name: "Aisha K.",
     handle: "Style Enthusiast",
-    avatar: "https://placehold.co/40x40"
+    avatar: "https://placehold.co/40x40.png"
   },
    {
     quote: "Shopping at OnceMore feels good. I found a unique pair of trousers that fit perfectly, and I love supporting a business that cares about the planet.",
     name: "David R.",
     handle: "Happy Customer",
-    avatar: "https://placehold.co/40x40"
+    avatar: "https://placehold.co/40x40.png"
   }
 ];
 

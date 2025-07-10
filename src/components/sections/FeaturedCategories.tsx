@@ -8,30 +8,30 @@ const categories = [
   {
     name: "Timeless Tops",
     href: "#",
-    imageSrc: "https://placehold.co/400x500",
+    imageSrc: "https://placehold.co/400x500.png",
     imageAlt: "A stylish top on a mannequin.",
     hint: "shirt woman"
   },
   {
     name: "Classic Bottoms",
     href: "#",
-    imageSrc: "https://placehold.co/400x500",
+    imageSrc: "https://placehold.co/400x500.png",
     imageAlt: "Well-fitting trousers.",
-    hint: "trousers"
+    hint: "jeans"
   },
   {
     name: "Elegant Outerwear",
     href: "#",
-    imageSrc: "https://placehold.co/400x500",
+    imageSrc: "https://placehold.co/400x500.png",
     imageAlt: "A stylish coat.",
-    hint: "coat"
+    hint: "jacket woman"
   },
   {
     name: "Unique Accessories",
     href: "#",
-    imageSrc: "https://placehold.co/400x500",
+    imageSrc: "https://placehold.co/400x500.png",
     imageAlt: "A handcrafted accessory.",
-    hint: "handbag"
+    hint: "scarf"
   },
 ];
 
