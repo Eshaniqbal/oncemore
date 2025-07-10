@@ -1,43 +1,59 @@
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ShoppingBag, Heart, Zap } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative h-[70vh] min-h-[500px] w-full overflow-hidden md:h-[90vh]">
-      <Image
-        src="https://placehold.co/1920x1080"
-        alt="Model wearing sustainable fashion in a beautiful landscape"
-        data-ai-hint="fashion model"
-        layout="fill"
-        objectFit="cover"
-        className="brightness-75"
-        priority
-      />
-      <div className="relative z-10 flex h-full flex-col items-start justify-center text-white animate-in fade-in duration-1000">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-2xl">
-            <span className="mb-2 block font-semibold uppercase tracking-widest text-primary-foreground/80">
-              Sustainable Style, Timeless Stories
+    <section className="bg-background">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-16 md:py-24">
+          <div className="space-y-6 text-center md:text-left animate-in fade-in slide-in-from-left-12 duration-500">
+            <span className="font-semibold uppercase tracking-wider text-primary">
+              Wear Stories, Not Trends
             </span>
-            <h1 className="font-headline text-5xl font-bold md:text-7xl leading-tight">
-              Wear a Story, <br/> Not Just a Trend
+            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight text-foreground">
+              Sustainable Style, Enduring Quality.
             </h1>
-            <p className="mt-6 text-lg md:text-xl max-w-prose text-primary-foreground/90">
-              Discover our curated collection of vintage and sustainably-crafted pieces. Each item is chosen for its quality, character, and enduring style.
+            <p className="text-lg text-muted-foreground md:pr-8">
+              Explore a curated collection of high-quality vintage and sustainable fashion. Each piece is selected for its unique character and timeless appeal.
             </p>
-            <div className="mt-8 flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button asChild size="lg">
                 <Link href="#shop">
-                  Explore the Collection
+                  Shop New Arrivals
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="secondary">
-                <Link href="#about">Our Mission</Link>
+                <Link href="#about">Learn Our Story</Link>
               </Button>
             </div>
+             <div className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 pt-4 text-sm text-muted-foreground">
+                <div className="flex items-center gap-2">
+                    <ShoppingBag className="w-4 h-4 text-primary" />
+                    <span>Vintage & Pre-loved</span>
+                </div>
+                 <div className="flex items-center gap-2">
+                    <Heart className="w-4 h-4 text-primary" />
+                    <span>Sustainably Sourced</span>
+                </div>
+                 <div className="flex items-center gap-2">
+                    <Zap className="w-4 h-4 text-primary" />
+                    <span>Unique Finds</span>
+                </div>
+            </div>
+          </div>
+          <div className="w-full h-full animate-in fade-in slide-in-from-right-12 duration-500">
+            <Image
+              src="https://placehold.co/600x700"
+              alt="A stylish person wearing sustainable fashion"
+              data-ai-hint="fashion model"
+              width={600}
+              height={700}
+              className="rounded-lg object-cover shadow-xl aspect-[6/7] w-full"
+              priority
+            />
           </div>
         </div>
       </div>
