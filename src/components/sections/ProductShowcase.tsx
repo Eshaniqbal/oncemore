@@ -5,6 +5,9 @@ import { products } from '@/lib/products';
 import ProductFilters from '@/components/products/ProductFilters';
 import ProductGrid from '@/components/products/ProductGrid';
 import type { Product } from '@/lib/types';
+import { Button } from '../ui/button';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 type Filters = {
   size: string;
@@ -14,7 +17,7 @@ type Filters = {
 };
 
 export default function ProductShowcase() {
-  const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>(products.slice(0, 8));
   const [filters, setFilters] = useState<Filters>({
     size: 'all',
     type: 'all',
@@ -44,7 +47,7 @@ export default function ProductShowcase() {
       tempProducts = tempProducts.filter(p => p.season === currentFilters.season);
     }
 
-    setFilteredProducts(tempProducts);
+    setFilteredProducts(tempProducts.slice(0,8));
   };
   
   const resetFilters = () => {
@@ -55,7 +58,7 @@ export default function ProductShowcase() {
       season: 'all',
     };
     setFilters(initialFilters);
-    setFilteredProducts(products);
+    setFilteredProducts(products.slice(0, 8));
   };
 
   return (
@@ -71,6 +74,14 @@ export default function ProductShowcase() {
         </div>
         <ProductFilters filters={filters} onFilterChange={handleFilterChange} onReset={resetFilters} />
         <ProductGrid products={filteredProducts} />
+        <div className="mt-12 text-center">
+          <Button asChild size="lg" variant="outline">
+            <Link href="/products">
+              View All Products
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
